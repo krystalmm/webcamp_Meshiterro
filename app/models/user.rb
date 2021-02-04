@@ -6,5 +6,6 @@ class User < ApplicationRecord
          
   has_many :post_images, dependent: :destroy # 複数形！ dependent: :destroyを指定すると、Userが消えたときpost_imageも消える！！
   has_many :post_comments, dependent: :destroy
-  
+  has_many :favorites, dependent: :destroy
+    
 end
