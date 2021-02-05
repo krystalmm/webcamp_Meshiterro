@@ -1,7 +1,7 @@
 class PostImage < ApplicationRecord
   
   belongs_to :user # 単数形！！
-  attachment :image
+  attachment :image # カラム名（image_idから_idを除く！）
   has_many :post_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
